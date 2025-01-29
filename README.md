@@ -16,10 +16,10 @@ O projeto tem como objetivo principal consolidar conceitos e práticas essenciai
 ✅ **Spring Boot**: Framework para criar uma API robusta e escalável.  
 ✅ **Maven**: Ferramenta de gerenciamento de dependências e automação do build.  
 ✅ **Arquitetura em camadas**: Organização do código em **Controller**, **Service** e **Repository**.  
-✅ **Cliente/Servidor, HTTP e JSON**: Comunicação entre front-end e back-end usando padrões RESTful.  
+✅ **Cliente/Servidor, HTTP e JSON**: Comunicação entre front-end e back-end usando padrões REST.  
 ✅ **Entidades e ORM com JPA/Hibernate**: Modelagem de dados e mapeamento objeto-relacional.  
 ✅ **Padrão DTO**: Encapsulamento e transferência de dados entre camadas da aplicação.  
-✅ **Relacionamentos N-N**: Implementação de associações complexas entre entidades no banco de dados.  
+✅ **Relacionamentos N-N**: Implementação de associações entre entidades no banco de dados.  
 ✅ **Consultas SQL personalizadas**: Utilização do **Spring Data JPA** para realizar queries otimizadas.  
 ✅ **Database Seeding**: Automação para popular o banco de dados com dados iniciais para testes.  
 ✅ **H2 Database**: Banco de dados em memória para ambiente de desenvolvimento.  
@@ -30,11 +30,18 @@ O projeto tem como objetivo principal consolidar conceitos e práticas essenciai
 
 ## 📋 **Funcionalidades**
 
+Atualmente, o sistema suporta apenas as seguintes funcionalidades:
+
 - 📌 **Listar jogos**: Obtenha todos os jogos cadastrados na base.  
+- 🔄 **Reordenar lista**: Personalize a ordem dos jogos na coleção.  
+
+### ✅ **Ações Futuras**
+
+No futuro, planejamos implementar as seguintes funcionalidades:
+
 - ➕ **Adicionar jogos**: Cadastre novos jogos na coleção.  
 - ✏️ **Editar jogos**: Atualize informações de jogos existentes.  
 - ❌ **Excluir jogos**: Remova jogos da coleção.  
-- 🔄 **Reordenar lista**: Personalize a ordem dos jogos na coleção.  
 
 ---
 
@@ -49,7 +56,7 @@ O projeto segue o padrão de camadas:
 
 ## 🛠 **Como Executar o Projeto**
 
-Pré-requisitos: Java 17
+**Pré-requisitos**: Java 17
 
 1️⃣ **Clone o repositório**:
 ```bash
@@ -76,12 +83,21 @@ mvn spring-boot:run
 
 ## 📌 **Rotas Principais da API**
 
+Atualmente, as rotas disponíveis são:
+
 | Método | Endpoint                   | Descrição                                       |
 |--------|----------------------------|------------------------------------------------|
 | GET    | `/games`                   | Lista todos os jogos                           |
 | GET    | `/lists`                   | Lista todas as listas                          |
 | GET    | `/lists/{id}/games`        | Lista os jogos pertencentes a uma lista        |
 | GET    | `/games/{id}`              | Detalha informações de um jogo específico      |
+
+### ✅ **Ações Futuras**
+
+No futuro, novas rotas serão adicionadas para suportar CRUD completo:
+
+| Método | Endpoint                   | Descrição                                       |
+|--------|----------------------------|------------------------------------------------|
 | POST   | `/games`                   | Adiciona um novo jogo                          |
 | PUT    | `/games/{id}`              | Atualiza informações de um jogo específico     |
 | DELETE | `/games/{id}`              | Remove um jogo do sistema                      |
@@ -93,11 +109,12 @@ mvn spring-boot:run
 O deploy foi realizado utilizando a plataforma **Railway**, com o **PostgreSQL** como banco de dados para produção.  
 
 Acesse a aplicação na nuvem:  
-🔗 [Link para o projeto Arsenal Game](https://dslist-production-b882.up.railway.app)
+🔗 [Link para o Arsenal Game](https://dslist-production-b882.up.railway.app)
 
 ---
 
 ## 👩‍💻 **Autora**
 
 **Deiziane Rodrigues**  
-🔗 [LinkedIn](https://www.linkedin.com/in/deizianer/) 
+🔗 [LinkedIn](https://www.linkedin.com/in/deizianer/)
+
