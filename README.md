@@ -89,14 +89,14 @@ Cada um dos recursos citados acima gera uma tabela correspondente no banco de da
 
 Atualmente, o sistema suporta apenas as seguintes funcionalidades:
 
-- ➕ **Adicionar jogos**: Cadastre novos jogos na coleção.
 - 📌 **Listar jogos**: Obtenha todos os jogos cadastrados na base.  
 - 🔄 **Reordenar lista**: Personalize a ordem dos jogos na coleção.  
 
 ### ✅ **Ações Futuras**
 
 No futuro, planejamos implementar as seguintes funcionalidades:
-  
+
+- ➕ **Adicionar jogos**: Cadastre novos jogos na coleção.
 - ✏️ **Editar jogos**: Atualize informações de jogos existentes.  
 - ❌ **Excluir jogos**: Remova jogos da coleção.  
 
@@ -174,8 +174,7 @@ No futuro, novas rotas serão adicionadas para suportar CRUD completo:
 
 O deploy foi realizado utilizando a plataforma **Railway**, com o **PostgreSQL** como banco de dados para produção.  
 
-Acesse a aplicação na nuvem:  
-🔗 [Link para o Arsenal Game](https://dslist-production-b882.up.railway.app)
+🔗 [Arsenal Game](https://dslist-production-b882.up.railway.app)
 
 ---
 
