@@ -28,24 +28,81 @@ O projeto tem como objetivo principal consolidar conceitos e práticas essenciai
 
 ---
 
+## 📊 Diagrama de Classes:
+
+```mermaid
+classDiagram
+    class Game {
+        id : Long
+        title : String
+        year : Integer
+        genre : String
+        platforms : String
+        score : Double
+        imgUrl : String
+        shortDescription : String
+        longDescription : String
+        findAll()
+        findById(Long id)
+        findByList(Long listId)
+    }
+
+    class GameList {
+        id : Long
+        name : String
+        findAll()
+        move(Long listId, int sourceIndex, int destinationIndex)
+    }
+
+    class Belonging {
+        id : BelongingPK
+        position : Integer
+    }
+
+    class BelongingPK {
+        game : Game
+        list : GameList
+    }
+
+    Game "n" -- "n" Belonging
+    GameList "n" -- "n" Belonging
+```
+
+## 🗄️Estrutura do Projeto
+
+O projeto é composto por três principais recursos, que são conjuntos de classes e interfaces responsáveis por mapear tipos de objetos e gerenciar sua persistência em um banco de dados relacional. Além disso, há uma classe auxiliar utilizada para a definição de chaves primárias compostas.
+
+### Recursos e Classe Auxiliar
+
+| Classe        | Descrição |
+|--------------|----------------------------------------------------------------------------------------------------------------------------------------|
+| Game         | Representa um jogo dentro da coleção, sendo responsável pelo mapeamento e armazenamento da entidade no banco de dados. |
+| GameList     | Define a estrutura de uma coleção de jogos, permitindo a organização e gerenciamento das listas criadas. |
+| Belonging    | Atua como uma entidade associativa entre Game e GameList, indicando a posição de cada jogo dentro de uma determinada lista. |
+| BelongingPK  | Classe auxiliar utilizada para definir uma chave primária composta, combinando os atributos game_id e list_id. |
+
+
+Cada um dos recursos citados acima gera uma tabela correspondente no banco de dados, com exceção da classe auxiliar BelongingPK, que é utilizada exclusivamente para a composição da chave primária.
+
+
 ## 📋 **Funcionalidades**
 
 Atualmente, o sistema suporta apenas as seguintes funcionalidades:
 
+- ➕ **Adicionar jogos**: Cadastre novos jogos na coleção.
 - 📌 **Listar jogos**: Obtenha todos os jogos cadastrados na base.  
 - 🔄 **Reordenar lista**: Personalize a ordem dos jogos na coleção.  
 
 ### ✅ **Ações Futuras**
 
 No futuro, planejamos implementar as seguintes funcionalidades:
-
-- ➕ **Adicionar jogos**: Cadastre novos jogos na coleção.  
+  
 - ✏️ **Editar jogos**: Atualize informações de jogos existentes.  
 - ❌ **Excluir jogos**: Remova jogos da coleção.  
 
 ---
 
-## 💻 **Estrutura do Projeto**
+## 🗄️ **Camadas**
 
 O projeto segue o padrão de camadas:  
 - **Controller**: Gerencia as requisições HTTP e retorna as respostas.  
@@ -79,6 +136,15 @@ mvn spring-boot:run
 5️⃣ **Acesse a API**:
 - **Localhost**: [http://localhost:8080](http://localhost:8080)
 
+---
+## Dependências utilizadas no projeto:
+
+|   Dependência     |                              	Descrição                                    
+|-------------------|----------------------------------------------------------------------------------------------------------------------------------------|
+| Spring Web        | Essa dependência fornece todas as bibliotecas necessárias para criar um projeto WEB e trabalhar com o protocolo HTTP/HTTPS.            |
+| Spring Data JPA   | Java Persistence API (JPA) é uma Biblioteca que armazena e recupera Objetos, que foram persistidos (armazenados) em um Bancos de Dados.|
+| PostgreSQL Driver | Responsável pela conexão entre nossa aplicação e o Banco de Dados PostgreSQL                                                           |
+| H2 Database       | Responsável pela conexão entre nossa aplicação e o Banco de Dados H2                                                                   |
 ---
 
 ## 📌 **Rotas Principais da API**
