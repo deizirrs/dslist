@@ -110,33 +110,6 @@ O projeto segue o padrão de camadas:
 - **Repository**: Responsável pela interação com o banco de dados via JPA.  
 
 ---
-
-## 🛠 **Como Executar o Projeto**
-
-**Pré-requisitos**: Java 17
-
-1️⃣ **Clone o repositório**:
-```bash
-git clone https://github.com/deizirrs/dslist.git
-```
-
-2️⃣ **Acesse o diretório do projeto**:
-```bash
-cd dslist
-```
-
-3️⃣ **Configure o ambiente (se necessário)**:
-- Ajuste o arquivo `application.properties` para configurar o banco de dados.
-
-4️⃣ **Execute o projeto**:
-```bash
-mvn spring-boot:run
-```
-
-5️⃣ **Acesse a API**:
-- **Localhost**: [http://localhost:8080](http://localhost:8080)
-
----
 ## Dependências utilizadas no projeto:
 
 |   Dependência     |                              	Descrição                                    
