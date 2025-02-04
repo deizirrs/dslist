@@ -1,6 +1,6 @@
-# 🎮 **Arsenal Game**
+# 🎮 **Arsenal Games**
 
-O **Arsenal Game** é uma aplicação back-end desenvolvida em **Java** utilizando o framework **Spring Boot** durante a 1ª edição de 2025 da **Semana DevSuperior**. O projeto consiste em uma **API REST** para gerenciar coleções de jogos dos gêneros **RPG** e **Plataforma**, com foco em permitir que os usuários visualizem e reordenem suas listas de jogos de forma personalizada.
+O **Arsenal Games** é uma aplicação back-end desenvolvida em **Java** utilizando o framework **Spring Boot** durante a 1ª edição de 2025 da **Semana DevSuperior**. O projeto consiste em uma **API REST** para gerenciar coleções de jogos dos gêneros **RPG** e **Plataforma**, com foco em permitir que os usuários visualizem e reordenem suas listas de jogos de forma personalizada.
 
 ---
 
@@ -174,7 +174,7 @@ No futuro, novas rotas serão adicionadas para suportar CRUD completo:
 
 O deploy foi realizado utilizando a plataforma **Railway**, com o **PostgreSQL** como banco de dados para produção.  
 
-🔗 [Arsenal Game](https://dslist-production-b882.up.railway.app)
+🔗 [Arsenal Games](https://dslist-production-b882.up.railway.app)
 
 ---
 
